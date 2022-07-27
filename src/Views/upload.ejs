@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODEJSBASE</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/upload">Upload</a>
+        <a href="about">About</a>
+    </div>
+
+    <div class="uploadfile">
+        <form method="POST" action="/upload-profile-pic" enctype="multipart/form-data">
+            <div>
+                <br><label>uploading a single file</label>
+                <input type="file" name="profile_pic">
+            </div>
+            <div>
+                <button type="submit">Save file</button>
+            </div>
+
+        </form>
+        <form method="POST" action="/upload-multiple-images" enctype="multipart/form-data">
+            <div>
+                <label>Select multiple images:</label>
+                <input type="file" name="multiple_images" multiple />
+            </div>
+            <div>
+                <input type="submit" name="btn_upload_multiple_images" value="Upload" />
+            </div>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
